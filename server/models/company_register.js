@@ -1,0 +1,80 @@
+const mongoose = require("mongoose");
+
+const company_register = new mongoose.Schema({
+    Name:{
+        type:String,
+        required:true
+    },
+    address:{
+        type:String,
+        required:true
+    },
+    city:{
+        type:String,
+        required:true
+    },
+    state:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    phone:{
+        type:Number,
+        required:true
+    },
+    company_name:{
+        type:String,
+        required:true
+    },
+    company_logo:{
+        type:String,
+        required:true
+    },
+    background:{
+        type:String,
+        required:true
+    },
+    product:{
+        type:String,
+        required:true
+    },
+    problem:{
+        type:String,
+        required:true
+    },
+    unique:{
+        type:String,
+        required:true
+    },
+    proposition:{
+        type:String,
+        required:true
+    },
+    Advantage:{
+        type:String,
+        required:true
+    },
+    revanue:{
+        type:String,
+        required:true
+    },
+    Incubation:{
+        type:String,
+        required:true
+    },
+    Proposal:{
+        type:String,
+        required:true
+    },
+    status:{
+        type:String,
+        default: "Pending",
+    }
+
+})
+
+const register = mongoose.model("company_register",company_register)
+module.exports={register}
